@@ -4,7 +4,9 @@ padding-left: 0;
 }
 
 img {
-    display:block
+    display:block;
+    max-width: 100%;
+    height: auto;
 }
 
 h1,
@@ -27,10 +29,15 @@ address {
 }
 
 .container {
-    width: 1158;
+    width: 1158px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 :root {
@@ -67,12 +74,13 @@ body {
     text-decoration: none;
 }
 /* ------------- TOP-LINE ----------------*/
-/* .first-page {} */
 
 .top {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     padding-top: 24px;
     padding-bottom: 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E7E9FC;
 }
 .logo {
     font-family: 'Raleway', sans-serif;
@@ -120,7 +128,6 @@ color: var(--active-color);
     display: flex;
     align-items: center;
 }
-/* .contact-item {} */
 
 .connection {
     line-height: 1.5;
@@ -148,6 +155,9 @@ color: var(--active-color);
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ground {
@@ -160,10 +170,8 @@ background-color: var(--hero-background);
     letter-spacing: 0.02em;
     color: var(--first-title-color);
     margin-bottom: 48px;
-    display: block;
-    /* /* width: 494px;
-    height: 120px; */
-    text-align: center;
+    /* display: block;
+    text-align: center; */
 }
 .btn {
     font-family: inherit;
@@ -173,7 +181,7 @@ background-color: var(--hero-background);
     cursor: pointer;
 }
 .first-btn {
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     line-height: 1.19;
     background: var(--active-color);
@@ -195,8 +203,7 @@ background-color: var(--hero-background);
 
 /* --------------------ADVANTAGES--------------------- */
 .advantages {
-        padding-top: 120px;
-        padding-bottom: 120px;
+    width: auto;
 }
 
 .visually-hidden {
@@ -212,11 +219,11 @@ background-color: var(--hero-background);
 }
 
 .adv-list {
-    display: flex;
+gap: 24px;
+display: flex;
 }
 
 .adv-item {
-    width: 264px;
 }
 
 .title {
@@ -230,19 +237,14 @@ background-color: var(--hero-background);
 }
 
 .adv-text {
-    width: 264px;
-    height: 72px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--first-text-color);
     margin-top: 32px;
     display: block;
-    margin-right: 24px;
 }
 /* ------------------ LIST OF DOING--------------------- */
 .works {
-    padding-top: 120px;
-    padding-bottom: 120px;
 }
 
 .heading {
@@ -256,18 +258,30 @@ background-color: var(--hero-background);
     margin-bottom: 72px;
 }
 
+.pic-doing {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
 /* ------------------OUR TEAM--------------------- */
 
 .team {
     background-color: var(--team-background-color);
-    padding-top: 120px;
-    padding-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-general {
+display: flex;
+gap: 24px;
 }
 
 .team-card {
     background-color: var(--card-background);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
+    width: 264px;
 }
 .card-name {
     font-weight: 500;
@@ -284,14 +298,21 @@ background-color: var(--hero-background);
     color: var(--first-text-color);
 }
 
+.space-card {
+    padding: 32px 16px;
+}
+
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo-footer {
 line-height: 1.33;
 }
+
 .studio-footer {
     color: var(--studio-footer-color);
 }
@@ -299,21 +320,24 @@ line-height: 1.33;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--second-text-color);
+    margin-top: 16px;
+    width: 264px;
 }
 /*-------------- PAGE 2 PORTFOLIO ----------------- */
-/* /* .second-page {} */
 
 .filters {
     padding-top: 96px;
-    padding-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .filters_btn {
 margin-bottom: 72px;
 display: flex;
+gap: 24px;
+justify-content: center;
+height: 48px;
 }
 /* -------------------- BUTTONS -------------------- */
-
-/* .visually-hidden {} */
 
 .second-btn {
     line-height: 1.5;
@@ -322,6 +346,8 @@ display: flex;
     border-radius: 4px;
     color: var(--active-color);
     margin-bottom: 72px;
+    padding: 12px 24px;
+    
 }
 .second-btn:hover,
 .second-btn:focus {
@@ -330,12 +356,25 @@ display: flex;
     color: var(--btn-color);
     border-color: var(--active-color);
 }
-/* .gallery {} */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -24px;
+    margin-top: -24px;
+}
+
+.gallery > .gallery-img {
+    flex-basis: calc(100% / 3 - 24px);
+    margin-left: 24px;
+    margin-top: 24px;
+}
+
 .gallery-img {
     background-color: var(--card-background);
     border: 0.5px solid #F4F4FD;
-    margin-bottom: 32px;
+    margin-bottom: 32px;  
 }
+
 .gallery-text {
     line-height: 1.5;
     text-align: center;
