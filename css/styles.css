@@ -1,3 +1,47 @@
+:root {
+    --first-text-color: #434455;
+    --second-text-color: #E7E9FC;
+    --first-title-color: #FFFFFF;
+    --second-title-color: #2E2F42;
+    --btn-color: #FFFFFF;
+    --first-btn-active-color: #404BBF;
+    --second-btn-background: #F4F4FD;
+    --first-logo-color: #4D5AE5;
+    --second-logo-color: #2E2F42;
+    --active-color: #4D5AE5;
+    --menu-color: #2E2F42;
+    --menu-hover-color: #434455;
+    --body-background: #FFFFFF;
+    --hero-background: #2E2F42;
+    --team-background-color: #F4F4FD;
+    --card-background: #FFFFFF;
+    --studio-footer-color: #F4F4FD;
+    --slate-color: #434455;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: var(--body-background);
+    color: var(--slate-color);
+} 
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1158px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    padding-bottom: 120px;
+}
+
 ul {
 margin: 0;
 padding-left: 0;
@@ -19,6 +63,7 @@ p
  {
     margin: 0;
 }
+
 button {
     margin: 0;
     padding: 0;
@@ -28,48 +73,10 @@ address {
     font-style: normal;
 }
 
-.container {
-    width: 1158px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-:root {
-    --first-text-color: #434455;
-    --second-text-color: #E7E9FC;
-    --first-title-color: #FFFFFF;
-    --second-title-color: #2E2F42;
-    --btn-color: #FFFFFF;
-    --first-btn-active-color: #404BBF;
-    --second-btn-background: #F4F4FD;
-    --first-logo-color:#4D5AE5;
-    --second-logo-color: #2E2F42;
-    --active-color: #4D5AE5;
-    --menu-color: #2E2F42;
-    --menu-hover-color: #434455;
-    --body-background: #FFFFFF;
-    --hero-background: #2E2F42;
-    --team-background-color: #F4F4FD;
-    --card-background: #FFFFFF;
-    --studio-footer-color: #F4F4FD;
-    --slate-color: #434455;
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    background-color: var(--body-background);
-    color: var(--slate-color);
-}
 .list {
     list-style: none;
 }
+
 .link {
     text-decoration: none;
 }
@@ -77,9 +84,6 @@ body {
 
 .top {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-    padding-top: 24px;
-    padding-bottom: 24px;
-    box-sizing: border-box;
     border-bottom: 1px solid #E7E9FC;
 }
 .logo {
@@ -96,10 +100,11 @@ body {
         color: var(--second-logo-color);
 }
 .navigation {
-    margin: auto;
 }
+
 .header-container {
     display: flex;
+    align-items: center;
 }
 
 .menu {
@@ -115,7 +120,7 @@ body {
     color: var(--menu-color);
     padding-top: 24px;
     padding-bottom: 24px;
-    align-items: center;
+    display: block;
 }
 .menu-item:hover,
 .menu-item:focus {  
@@ -127,6 +132,7 @@ color: var(--active-color);
 .contact {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 .connection {
@@ -155,7 +161,6 @@ color: var(--active-color);
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -167,11 +172,9 @@ background-color: var(--hero-background);
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
-    letter-spacing: 0.02em;
     color: var(--first-title-color);
-    margin-bottom: 48px;
-    /* display: block;
-    text-align: center; */
+    margin: 0 auto 48px;
+    width: 494px;
 }
 .btn {
     font-family: inherit;
@@ -186,7 +189,8 @@ background-color: var(--hero-background);
     line-height: 1.19;
     background: var(--active-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    /* border-radius: 4px; */
+    border: none;
     color: var(--btn-color);
 }
 .first-btn:hover,
@@ -203,7 +207,7 @@ background-color: var(--hero-background);
 
 /* --------------------ADVANTAGES--------------------- */
 .advantages {
-    width: auto;
+    padding-top: 120px;
 }
 
 .visually-hidden {
@@ -219,8 +223,8 @@ background-color: var(--hero-background);
 }
 
 .adv-list {
-gap: 24px;
-display: flex;
+    gap: 24px;
+    display: flex;
 }
 
 .adv-item {
@@ -233,19 +237,15 @@ display: flex;
     letter-spacing: 0.02em;
     color: var(--second-title-color);
     margin-bottom: 8px;
-    margin-top: 32px;
 }
 
 .adv-text {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--first-text-color);
-    margin-top: 32px;
-    display: block;
 }
+
 /* ------------------ LIST OF DOING--------------------- */
-.works {
-}
 
 .heading {
     font-weight: 500;
@@ -273,8 +273,8 @@ display: flex;
 }
 
 .card-general {
-display: flex;
-gap: 24px;
+    display: flex;
+    gap: 24px;
 }
 
 .team-card {
@@ -299,18 +299,18 @@ gap: 24px;
 }
 
 .space-card {
-    padding: 32px 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .logo-footer {
 line-height: 1.33;
+margin-bottom: 16px;
 }
 
 .studio-footer {
@@ -320,23 +320,22 @@ line-height: 1.33;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--second-text-color);
-    margin-top: 16px;
     width: 264px;
+    margin-top: 16px;
 }
 /*-------------- PAGE 2 PORTFOLIO ----------------- */
 
 .filters {
     padding-top: 96px;
-    margin-left: auto;
-    margin-right: auto;
 }
+
 .filters_btn {
 margin-bottom: 72px;
 display: flex;
 gap: 24px;
 justify-content: center;
-height: 48px;
 }
+
 /* -------------------- BUTTONS -------------------- */
 
 .second-btn {
@@ -345,10 +344,9 @@ height: 48px;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     color: var(--active-color);
-    margin-bottom: 72px;
     padding: 12px 24px;
-    
 }
+
 .second-btn:hover,
 .second-btn:focus {
     background-color: var(--active-color);
@@ -359,20 +357,13 @@ height: 48px;
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -24px;
-    margin-top: -24px;
-}
-
-.gallery > .gallery-img {
-    flex-basis: calc(100% / 3 - 24px);
-    margin-left: 24px;
-    margin-top: 24px;
+    gap: 48px 24px;
 }
 
 .gallery-img {
     background-color: var(--card-background);
     border: 0.5px solid #F4F4FD;
-    margin-bottom: 32px;  
+    flex-basis: calc((100% - 48px) / 3);
 }
 
 .gallery-text {
@@ -380,7 +371,11 @@ height: 48px;
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--first-text-color);
-    margin-top: 32px;
+    
 }
 
+.gallery-p {
+    padding: 32px 0;
+    margin-left: 16px;
+}
 
