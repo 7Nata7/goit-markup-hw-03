@@ -189,7 +189,7 @@ background-color: var(--hero-background);
     line-height: 1.19;
     background: var(--active-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    /* border-radius: 4px; */
+    border-radius: 4px;
     border: none;
     color: var(--btn-color);
 }
@@ -197,7 +197,6 @@ background-color: var(--hero-background);
 .first-btn:focus {
     background-color: var(--first-btn-active-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 4px;
 }
 .first-btn:active {
     background-color: var(--first-btn-active-color);
@@ -270,6 +269,7 @@ background-color: var(--hero-background);
     background-color: var(--team-background-color);
     margin-left: auto;
     margin-right: auto;
+    padding-top: 120px;
 }
 
 .card-general {
@@ -375,7 +375,6 @@ justify-content: center;
 }
 
 .gallery-p {
-    padding: 32px 0;
-    margin-left: 16px;
+    padding: 32px 16px;
 }
 
